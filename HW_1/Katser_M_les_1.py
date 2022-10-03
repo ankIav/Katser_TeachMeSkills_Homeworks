@@ -5,7 +5,8 @@ def input_digital_check(variable_number):
 
     while True:
         number = input(
-            'Input a digital value of %s: ' % variable_number)  # number is string
+            'Input a digital value of %s: ' % variable_number
+        )  # number is string
 
         try:
             number = int(number)  # trying to make number integer
@@ -15,12 +16,18 @@ def input_digital_check(variable_number):
                 number = float(number)  # trying to make number float
             except ValueError:  # if not float
                 print(
-                    "You've entered a wrong value of %s, try again!" % variable_number)
+                    "You've entered a wrong value of %s, try again!"
+                    % variable_number
+                )
                 continue  # run cycle again
-            else:  # if exception was not in float(number), that is means input was correct and break cycle WHILE
+            else:
+                # if exception was not in float(number),
+                # that is means input was correct and break cycle WHILE
                 break
 
-        else:  # if exception was not in int(number), that is means input was correct and break cycle WHILE
+        else:
+            # if exception was not in int(number),
+            # that is means input was correct and break cycle WHILE
             break
 
     return number
@@ -30,6 +37,7 @@ def input_operation_check(list_operators_keys):
     """
     check operation for correct input
     """
+
     while True:
         operation_type = input(
             'Input type of operation between number 1 and 2: ')
@@ -47,6 +55,7 @@ def sum_calculator_of_two_numbers(number1, number2):
     """
     calculator function of 2 numbers
     """
+
     return number1 + number2
 
 
@@ -54,6 +63,7 @@ def minus_calculator_of_two_numbers(number1, number2):
     """
     calculator function of 2 numbers
     """
+
     return number1 - number2
 
 
@@ -61,6 +71,7 @@ def multiply_calculator_of_two_numbers(number1, number2):
     """
     calculator function of 2 numbers
     """
+
     return number1 * number2
 
 
@@ -68,6 +79,7 @@ def divide_calculator_of_two_numbers(number1, number2):
     """
     calculator function of 2 numbers
     """
+
     try:
         return number1 / number2
 
