@@ -2,6 +2,7 @@ def input_digital_check(variable_number):
     """
     check variables on correctly input (digital)
     """
+
     while True:
         number = input(
             'Input a digital value of %s: ' % variable_number)  # number is string
