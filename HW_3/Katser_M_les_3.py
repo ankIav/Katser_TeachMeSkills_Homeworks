@@ -1,3 +1,5 @@
+"""This module completes homework of the 3 lesson"""
+
 from random import randint
 
 # region Task 1
