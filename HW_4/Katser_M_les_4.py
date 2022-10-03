@@ -1,8 +1,6 @@
-"""
-This module completes homework of the 4 lesson
-TODO: just run this code, in this program realized choice of task to start
-    in def main()
-"""
+"""This module completes homework of the 4 lesson"""
+# TODO: just run this code, in this program realized choice of task to start
+#     in def main()
 
 import time
 
