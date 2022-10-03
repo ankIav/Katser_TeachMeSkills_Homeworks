@@ -1,1 +1,1 @@
-This repository contains homeworks from courle TeachMeSkills
+This repository contains homeworks from Python course TeachMeSkills
