@@ -1,8 +1,6 @@
-"""
-This module completes homework of the 5 lesson
-TODO: just run this code, in this program realized choice of task to start
-    in def main()
-"""
+"""This module completes homework of the 5 lesson"""
+# TODO: just run this code, in this program realized choice of task to start
+#  in def main()
 
 import time
 
@@ -170,7 +168,7 @@ def task_1(tusk_num: int):
     """
 
     integer = input_to_int('Enter some integer:\n')
-
+    # do not use lambda with not iterable objects
     lambda_even_obb = lambda x: 'Even' if x % 2 == 0 else 'Odd'
 
     print(lambda_even_obb(integer))
