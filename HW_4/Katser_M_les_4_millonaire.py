@@ -1,6 +1,7 @@
 """"
 Millionaire the game
 """
+
 iter_step = -1
 loop_flag = 0
 step_money = {0: 0, 1: 10, 2: 50, 4: 100, 5: 250, 6: 500,
