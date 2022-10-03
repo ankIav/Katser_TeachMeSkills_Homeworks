@@ -163,6 +163,7 @@ def task_5():
             # clear the list after appending into XLSX before next appending
             list_rows_xlsx.clear()
 
+    # save and close XLSX file
     wb.save('output_files/Katser_M_less_6_Task_5.xlsx')
     wb.close()
 
