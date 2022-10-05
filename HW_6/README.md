@@ -3,7 +3,7 @@ RU:Декодировать в строку байтовое значение b'
 
 EN:Decode the byte value b'r\xc3\xa9sum\xc3\xa9' into a string. Then the result convert into a byte form in the "Latin 1" encoding and then the result again decode into a string (the results of all conversions are displayed on the screen).
 
-**The result must be:
+The result must be:
 
 *résumé
 b'r\xe9sum\xe9'
