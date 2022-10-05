@@ -1,20 +1,27 @@
 Task # 1:
 RU:Декодировать в строку байтовое значение b'r\xc3\xa9sum\xc3\xa9'. Затем результат преобразовать в байтовый вид в кодировке "Latin 1" и затем результат снова декодирвать в строку (результаты всех преобразований выводить на экран).
+
 EN:Decode the byte value b'r\xc3\xa9sum\xc3\xa9' into a string. Then the result convert into a byte form in the "Latin 1" encoding and then the result again decode into a string (the results of all conversions are displayed on the screen).
 
-Result must be:
+The result must be:
 résumé
 b'r\xe9sum\xe9'
 résumé
 
 Task # 2:
-Ввести с клавиатуры 4 строки и сохранить их в 4 разные переменные. Создать файл и записать в него первые 2 строки и закрыть файл. Затем открыть файл на редактирование и дозаписать оставшиеся 2 строки. В итоговом файле должны быть 4 строки, каждая из которых должна начинаться с новой строки.
+RU:Ввести с клавиатуры 4 строки и сохранить их в 4 разные переменные. Создать файл и записать в него первые 2 строки и закрыть файл. Затем открыть файл на редактирование и дозаписать оставшиеся 2 строки. В итоговом файле должны быть 4 строки, каждая из которых должна начинаться с новой строки.
+
+EN:Enter 4 lines from the keyboard and store them in 4 different variables. Create a file and write the first 2 lines to it and close the file. Then open the file for editing and add the remaining 2 lines. The resulting file should have 4 lines, each of which should start on a new line.
 
 Task # 3:
 Создать словапрь, в качестве ключа которого будет 6-ти значное число (id), а в качестве значений - кортеж состоящий из 2-х элементов: имя (str) и возраст (int). Сделать около 5-6 элементов словаря. Записать данный словарь на диск в json-файл.
 
 Task # 4:
-Прочитать сохраненный json-файл и записать данные на диск в csv-файл, первой строкой которого озаглавив каждый столбец и добавив новый столбец "телефон".
+RU:Прочитать сохраненный json-файл и записать данные на диск в csv-файл, первой строкой которого озаглавив каждый столбец и добавив новый столбец "телефон".
+
+EN:Create a dictionary, the key of which will be a 6-digit number (id), and the values ​​- a tuple consisting of 2 elements: name (str) and age (int). Make about 5-6 vocabulary items. Write this dictionary to disk as a json file.
 
 Taks # **5:
-Прочитать сохраненный csv-файл и сохранить данные в excel-файл, кроме возраста - столбец с этими данными не нужен.
+RU:Прочитать сохраненный csv-файл и сохранить данные в excel-файл, кроме возраста - столбец с этими данными не нужен.
+
+EN:Read the saved csv file and save the data to excel file, except for the age - the column with this data is not needed.
