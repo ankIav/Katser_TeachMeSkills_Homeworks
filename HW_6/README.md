@@ -8,10 +8,14 @@ résumé
 b'r\xe9sum\xe9'
 résumé
 
+
 Task # 2:
 RU:Ввести с клавиатуры 4 строки и сохранить их в 4 разные переменные. Создать файл и записать в него первые 2 строки и закрыть файл. Затем открыть файл на редактирование и дозаписать оставшиеся 2 строки. В итоговом файле должны быть 4 строки, каждая из которых должна начинаться с новой строки.
 
 EN:Enter 4 lines from the keyboard and store them in 4 different variables. Create a file and write the first 2 lines to it and close the file. Then open the file for editing and add the remaining 2 lines. The resulting file should have 4 lines, each of which should start on a new line.
+
+The result must be: ![изображение](https://user-images.githubusercontent.com/91248462/194117244-cbd2945b-10b7-4782-8dd3-e6cb79325e90.png)
+
 
 Task # 3:
 Создать словапрь, в качестве ключа которого будет 6-ти значное число (id), а в качестве значений - кортеж состоящий из 2-х элементов: имя (str) и возраст (int). Сделать около 5-6 элементов словаря. Записать данный словарь на диск в json-файл.
