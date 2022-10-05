@@ -4,10 +4,9 @@ RU:Декодировать в строку байтовое значение b'
 EN:Decode the byte value b'r\xc3\xa9sum\xc3\xa9' into a string. Then the result convert into a byte form in the "Latin 1" encoding and then the result again decode into a string (the results of all conversions are displayed on the screen).
 
 The result must be:
-résumé
+*résumé
 b'r\xe9sum\xe9'
-résumé
-
+résumé*
 
 Task # 2:
 RU:Ввести с клавиатуры 4 строки и сохранить их в 4 разные переменные. Создать файл и записать в него первые 2 строки и закрыть файл. Затем открыть файл на редактирование и дозаписать оставшиеся 2 строки. В итоговом файле должны быть 4 строки, каждая из которых должна начинаться с новой строки.
@@ -18,14 +17,18 @@ The result must be: ![изображение](https://user-images.githubusercont
 
 
 Task # 3:
-Создать словапрь, в качестве ключа которого будет 6-ти значное число (id), а в качестве значений - кортеж состоящий из 2-х элементов: имя (str) и возраст (int). Сделать около 5-6 элементов словаря. Записать данный словарь на диск в json-файл.
+RU:Создать словапрь, в качестве ключа которого будет 6-ти значное число (id), а в качестве значений - кортеж состоящий из 2-х элементов: имя (str) и возраст (int). Сделать около 5-6 элементов словаря. Записать данный словарь на диск в json-файл.
+
+EN:Create a dictionary, the key of which will be a 6-digit number (id), and the values - a tuple consisting of 2 elements: name (str) and age (int). Make about 5-6 vocabulary items. Write this dictionary to disk as a json file.
+
+The result must be: ![изображение](https://user-images.githubusercontent.com/91248462/194119457-8c51ebbe-3bda-4647-975c-38f50adb4e90.png)
 
 Task # 4:
 RU:Прочитать сохраненный json-файл и записать данные на диск в csv-файл, первой строкой которого озаглавив каждый столбец и добавив новый столбец "телефон".
 
-EN:Create a dictionary, the key of which will be a 6-digit number (id), and the values ​​- a tuple consisting of 2 elements: name (str) and age (int). Make about 5-6 vocabulary items. Write this dictionary to disk as a json file.
+EN:Read the saved json file and write the data to disk in a csv file, with the first line heading each column and adding a new column "phone".
 
-Taks # **5:
+Taks # 5:
 RU:Прочитать сохраненный csv-файл и сохранить данные в excel-файл, кроме возраста - столбец с этими данными не нужен.
 
 EN:Read the saved csv file and save the data to excel file, except for the age - the column with this data is not needed.
