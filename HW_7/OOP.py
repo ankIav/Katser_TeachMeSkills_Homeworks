@@ -1,5 +1,5 @@
 """This module contains objects and methods of classes"""
-
+# TODO:  лучше так не делать импорт, а импортировать конкретный класс
 from classes import *
 
 # create 2 trucks in list
