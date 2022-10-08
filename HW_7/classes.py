@@ -29,11 +29,14 @@ class Auto:
     def get_info(self):
         """Printing full info about auto"""
 
-        self._auto_info = {
-            'Brand': self.brand,
-            'Mark': self.mark,
-            'Age': f'{self.age} years',
-        }
+        # self._auto_info = {
+        #     'Brand': self.brand,
+        #     'Mark': self.mark,
+        #     'Age': f'{self.age} years',
+        # }
+        self._auto_info['Brand'] = self.brand
+        self._auto_info['Mark'] = self.mark
+        self._auto_info['Age'] = self.age
 
         if self.color is not None and self.weight is not None:
             self._auto_info['Color'] = self.color
@@ -102,6 +105,12 @@ class Car(Auto):
 
         super().__init__(brand, mark, age)
         self.max_speed = max_speed
+
+    def get_info(self):
+        """Redefine method of printing full info of auto"""
+
+        self._auto_info['Max load'] = f'{self.max_speed} km/h'
+        super(Car, self).get_info()
 
     def move(self):
         """Redefine method of moving from parent class Auto"""
