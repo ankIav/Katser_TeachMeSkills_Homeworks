@@ -14,12 +14,7 @@ class Auto:
         self.age = age
         self.weight = None
         self.color = None
-
-        self.auto_info = {
-            'Brand': self.brand,
-            'Mark': self.mark,
-            'Age': f'{self.age} years',
-        }
+        self._auto_info = {}
 
     def set_color(self, color: str):
         """Initialize attribute color"""
@@ -34,17 +29,23 @@ class Auto:
     def get_info(self):
         """Printing full info about auto"""
 
+        self._auto_info = {
+            'Brand': self.brand,
+            'Mark': self.mark,
+            'Age': f'{self.age} years',
+        }
+
         if self.color is not None and self.weight is not None:
-            self.auto_info['Color'] = self.color
-            self.auto_info['Weight'] = f'{self.weight} tonn'
+            self._auto_info['Color'] = self.color
+            self._auto_info['Weight'] = f'{self.weight} tonn'
         elif self.color is not None and self.weight is None:
-            self.auto_info['Color'] = self.color
+            self._auto_info['Color'] = self.color
         elif self.color is None and self.weight is not None:
-            self.auto_info['Weight'] = f'{self.weight} tonn'
+            self._auto_info['Weight'] = f'{self.weight} tonn'
 
         print(f'Full {self.__class__.__name__} info:')
 
-        for key, value in self.auto_info.items():
+        for key, value in self._auto_info.items():
             print(f'\t{key} is {value}')
 
     def move(self):
@@ -75,7 +76,7 @@ class Truck(Auto):
     def get_info(self):
         """Redefine method of printing full info of auto"""
 
-        self.auto_info['Max load'] = f'{self.max_load} tonn'
+        self._auto_info['Max load'] = f'{self.max_load} tonn'
         super(Truck, self).get_info()
 
     def move(self):
