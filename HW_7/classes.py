@@ -109,7 +109,7 @@ class Car(Auto):
     def get_info(self):
         """Redefine method of printing full info of auto"""
 
-        self._auto_info['Max load'] = f'{self.max_speed} km/h'
+        self._auto_info['Max speed'] = f'{self.max_speed} km/h'
         super(Car, self).get_info()
 
     def move(self):
