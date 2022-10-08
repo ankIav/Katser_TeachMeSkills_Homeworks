@@ -14,7 +14,7 @@ class Auto:
         self.age = age
         self.weight = None
         self.color = None
-        self._auto_info = {}
+        self.auto_info = {}
 
     def set_color(self, color: str):
         """Initialize attribute color"""
@@ -34,21 +34,21 @@ class Auto:
         #     'Mark': self.mark,
         #     'Age': f'{self.age} years',
         # }
-        self._auto_info['Brand'] = self.brand
-        self._auto_info['Mark'] = self.mark
-        self._auto_info['Age'] = self.age
+        self.auto_info['Brand'] = self.brand
+        self.auto_info['Mark'] = self.mark
+        self.auto_info['Age'] = self.age
 
         if self.color is not None and self.weight is not None:
-            self._auto_info['Color'] = self.color
-            self._auto_info['Weight'] = f'{self.weight} tonn'
+            self.auto_info['Color'] = self.color
+            self.auto_info['Weight'] = f'{self.weight} tonn'
         elif self.color is not None and self.weight is None:
-            self._auto_info['Color'] = self.color
+            self.auto_info['Color'] = self.color
         elif self.color is None and self.weight is not None:
-            self._auto_info['Weight'] = f'{self.weight} tonn'
+            self.auto_info['Weight'] = f'{self.weight} tonn'
 
         print(f'Full {self.__class__.__name__} info:')
 
-        for key, value in self._auto_info.items():
+        for key, value in self.auto_info.items():
             print(f'\t{key} is {value}')
 
     def move(self):
@@ -79,7 +79,7 @@ class Truck(Auto):
     def get_info(self):
         """Redefine method of printing full info of auto"""
 
-        self._auto_info['Max load'] = f'{self.max_load} tonn'
+        self.auto_info['Max load'] = f'{self.max_load} tonn'
         super(Truck, self).get_info()
 
     def move(self):
@@ -109,7 +109,7 @@ class Car(Auto):
     def get_info(self):
         """Redefine method of printing full info of auto"""
 
-        self._auto_info['Max speed'] = f'{self.max_speed} km/h'
+        self.auto_info['Max speed'] = f'{self.max_speed} km/h'
         super(Car, self).get_info()
 
     def move(self):

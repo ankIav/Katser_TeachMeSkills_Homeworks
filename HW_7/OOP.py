@@ -22,7 +22,7 @@ for truck in trucks_list:
 
 # create 2 cars in list
 cars_list = [
-    Car('mersedez', 'benz', 6, 250),
+    Car('mercedes', 'benz', 6, 250),
     Car('lada', 'kalina', 14, 200)
 ]
 
@@ -33,5 +33,5 @@ cars_list[1].birthday()  # increment age of car lada
 # use every method
 for car in cars_list:
     car.get_info()
-    car.stop()
     car.move()
+    car.stop()
