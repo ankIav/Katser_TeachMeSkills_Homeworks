@@ -9,21 +9,43 @@ class Auto:
     def __init__(self, brand: str, mark: str, age: int):
         """Initialize attributes of auto"""
 
-        self.brand = brand.upper()
-        self.mark = mark.title()
+        self.brand = brand.strip().upper()
+        self.mark = mark.strip().upper()
         self.age = age
         self.weight = None
         self.color = None
 
-    def get_color(self, color: str):
+        self.auto_info = {
+            'Brand': self.brand,
+            'Mark': self.mark,
+            'Age': f'{self.age} years',
+        }
+
+    def set_color(self, color: str):
         """Initialize attribute color"""
 
-        self.color = color.title()
+        self.color = color.strip().title()
 
-    def get_weight(self, weight: float):
+    def set_weight(self, weight: float):
         """Initialize attribute weight"""
 
         self.weight = weight
+
+    def get_info(self):
+        """Printing full info about auto"""
+
+        if self.color is not None and self.weight is not None:
+            self.auto_info['Color'] = self.color
+            self.auto_info['Weight'] = f'{self.weight} tonn'
+        elif self.color is not None and self.weight is None:
+            self.auto_info['Color'] = self.color
+        elif self.color is None and self.weight is not None:
+            self.auto_info['Weight'] = f'{self.weight} tonn'
+
+        print(f'Full {self.__class__.__name__} info:')
+
+        for key, value in self.auto_info.items():
+            print(f'\t{key} is {value}')
 
     def move(self):
         """Start moving"""
@@ -33,7 +55,7 @@ class Auto:
     def stop(self):
         """Stop moving"""
 
-        print(f'Stop {self.brand} {self.mark}')
+        print(f'Stop {self.brand} {self.mark}\n{"-"*20}')
 
     def birthday(self):
         """Increment age"""
@@ -49,6 +71,12 @@ class Truck(Auto):
 
         super().__init__(brand, mark, age)
         self.max_load = max_load
+
+    def get_info(self):
+        """Redefine method of printing full info of auto"""
+
+        self.auto_info['Max load'] = f'{self.max_load} tonn'
+        super(Truck, self).get_info()
 
     def move(self):
         """Redefine method of moving from parent class Auto"""
