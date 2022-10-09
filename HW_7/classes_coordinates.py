@@ -12,16 +12,6 @@ class Point(object):
         self.x = x
         self.y = y
 
-    def distance_from_origin(self) -> float:
-        """:return: value if distance from origin to point"""
-
-        return (self.x ** 2 + self.y ** 2) ** (1 / 2)
-
-    def _square(self) -> int:
-        """Square of rectangle"""
-
-        return abs(self.x * self.y)
-
     def __repr__(self) -> str:
         """:return: string info about object"""
 
@@ -83,6 +73,16 @@ class Point(object):
 
         return self._square() > other._square()
 
+    def distance_from_origin(self) -> float:
+        """:return: value if distance from origin to point"""
+
+        return (self.x ** 2 + self.y ** 2) ** (1 / 2)
+
+    def _square(self) -> int:
+        """Square of rectangle"""
+
+        return abs(self.x * self.y)
+
 
 class Circle(Point):
     """Inheritance-class from Point"""
@@ -92,33 +92,6 @@ class Circle(Point):
 
         super().__init__(x, y)
         self.radius = radius
-
-    def edge_distance_from_origin(self) -> float:
-        """:return: value of edge distance from origin????"""
-
-        return abs(Circle.distance_from_origin(self) - self.radius)
-
-    def area(self) -> float:
-        """:return: area of circle"""
-
-        return math.pi * (self.radius ** 2)
-
-    def circumference(self) -> float:
-        """:return: value of circumference"""
-
-        return 2 * math.pi * self.radius
-
-    def sub_circles(self, other) -> float | Point:
-        """
-        method for subtracting the radii of circles
-        :param other: another circle
-        :return: radius difference value or object class Point.
-        """
-
-        return (
-            abs(self.radius - other.radius) if self.radius != other.radius
-            else Point(self.x - other.x, self.y - other.y)
-        )
 
     def __repr__(self) -> str:
         """:return: string info about object"""
@@ -192,3 +165,30 @@ class Circle(Point):
         """
 
         return self.circumference() > other.circumference()
+
+    def edge_distance_from_origin(self) -> float:
+        """:return: value of edge distance from origin????"""
+
+        return abs(Circle.distance_from_origin(self) - self.radius)
+
+    def area(self) -> float:
+        """:return: area of circle"""
+
+        return math.pi * (self.radius ** 2)
+
+    def circumference(self) -> float:
+        """:return: value of circumference"""
+
+        return 2 * math.pi * self.radius
+
+    def sub_circles(self, other) -> float | Point:
+        """
+        method for subtracting the radii of circles
+        :param other: another circle
+        :return: radius difference value or object class Point.
+        """
+
+        return (
+            abs(self.radius - other.radius) if self.radius != other.radius
+            else Point(self.x - other.x, self.y - other.y)
+        )
