@@ -2,6 +2,7 @@
 
 from classes import Truck, Car
 
+
 # create 2 trucks in list
 trucks_list = [
     Truck('kamaz', '6460', 10, 20),

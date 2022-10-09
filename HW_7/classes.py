@@ -1,4 +1,4 @@
-"""This module of classes"""
+"""This module of class Auto"""
 
 import time
 
@@ -59,7 +59,7 @@ class Auto:
     def stop(self):
         """Stop moving"""
 
-        print(f'Stop {self.brand} {self.mark}\n{"-"*20}')
+        print(f'Stop {self.brand} {self.mark}\n{"-" * 20}')
 
     def birthday(self):
         """Increment age"""
