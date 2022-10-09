@@ -1,6 +1,6 @@
 """This module contains objects and methods of classes"""
 
-from classes import Truck, Car
+from classes_auto import Truck, Car
 from classes_coordinates import Point, Circle
 
 
