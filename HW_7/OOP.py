@@ -4,105 +4,105 @@ from classes_auto import Truck, Car
 from classes_coordinates import Point, Circle
 
 
-def output_print(compare: str):
+def output_print(compare: str, name_cls: str):
     for key, value in dict_compares.items():
         print(compare * 40) if len(compare) == 1 else print(compare * 20)
         for value_k, value_v in value.items():
             print(
-                f'Is {point.__class__.__name__} #{key + 1} {compare} '
-                f'{point.__class__.__name__} #{value_k + 1}? '
+                f'Is {name_cls} #{key + 1} {compare} '
+                f'{name_cls} #{value_k + 1}? '
                 f'- {value_v}'
             )
 
 
-def compare_lt():
+def compare_lt(element: object, func_list: list, name_cls: str):
     """
     <
     """
-    for j in range(len(list_points)):
+    for j in range(len(func_list)):
         # skip comparing element to itself
         if idx == j:
             continue
 
-        tmp_dict_compares[j] = (point < list_points[j])
+        tmp_dict_compares[j] = (element < func_list[j])
         dict_compares[i] = tmp_dict_compares
 
-    output_print('<')
+    output_print('<', name_cls)
 
 
-def compare_le():
+def compare_le(element: object, func_list: list, name_cls: str):
     """
     <=
     """
-    for j in range(len(list_points)):
+    for j in range(len(func_list)):
         # skip comparing element to itself
         if idx == j:
             continue
 
-        tmp_dict_compares[j] = (point <= list_points[j])
+        tmp_dict_compares[j] = (element <= func_list[j])
         dict_compares[i] = tmp_dict_compares
 
-    output_print('<=')
+    output_print('<=', name_cls)
 
 
-def compare_eq():
+def compare_eq(element: object, func_list: list, name_cls: str):
     """
     ==
     """
-    for j in range(len(list_points)):
+    for j in range(len(func_list)):
         # skip comparing element to itself
         if idx == j:
             continue
 
-        tmp_dict_compares[j] = (point == list_points[j])
+        tmp_dict_compares[j] = (element == func_list[j])
         dict_compares[i] = tmp_dict_compares
 
-    output_print('=')
+    output_print('=', name_cls)
 
 
-def compare_ne():
+def compare_ne(element: object, func_list: list, name_cls: str):
     """
     !=
     """
-    for j in range(len(list_points)):
+    for j in range(len(func_list)):
         # skip comparing element to itself
         if idx == j:
             continue
 
-        tmp_dict_compares[j] = (point != list_points[j])
+        tmp_dict_compares[j] = (element != func_list[j])
         dict_compares[i] = tmp_dict_compares
 
-    output_print('!=')
+    output_print('!=', name_cls)
 
 
-def compare_ge():
+def compare_ge(element: object, func_list: list, name_cls: str):
     """
     >=
     """
-    for j in range(len(list_points)):
+    for j in range(len(func_list)):
         # skip comparing element to itself
         if idx == j:
             continue
 
-        tmp_dict_compares[j] = (point >= list_points[j])
+        tmp_dict_compares[j] = (element >= func_list[j])
         dict_compares[i] = tmp_dict_compares
 
-    output_print('>=')
+    output_print('>=', name_cls)
 
 
-def compare_gt():
+def compare_gt(element: object, func_list: list, name_cls: str):
     """
     >
     """
-    for j in range(len(list_points)):
+    for j in range(len(func_list)):
         # skip comparing element to itself
         if idx == j:
             continue
 
-        tmp_dict_compares[j] = (point > list_points[j])
+        tmp_dict_compares[j] = (element > func_list[j])
         dict_compares[i] = tmp_dict_compares
 
-    output_print('>')
+    output_print('>', name_cls)
 
 
 # create 2 trucks in list
@@ -156,15 +156,37 @@ list_circles = [
     Circle(-1, -2, 3)
 ]
 
+list_points.append(list_circles[1].sub_circles(list_circles[3]))
+
+for i, circle in enumerate(list_circles):
+    print(f'{"-"*20}{circle.__class__.__name__} #{i+1} methods{"-"*20}')
+    print(str(circle))
+    print(repr(circle))
+    print(f'Area = {circle.area()}')
+    print(f'Circumference = {circle.circumference()}')
+    print(f'Edge distance from origin = {circle.edge_distance_from_origin()}')
+
+    # comparing elements each other
+    print(f'{"="*10}Comparing elements each other{"="*10}')
+
+    idx = list_circles.index(circle)
+    dict_compares = {}
+    tmp_dict_compares = {}
+
+    compare_lt(circle, list_circles, circle.__class__.__name__)  # <
+    compare_le(circle, list_circles, circle.__class__.__name__)  # <=
+    compare_eq(circle, list_circles, circle.__class__.__name__)  # ==
+    compare_ne(circle, list_circles, circle.__class__.__name__)  # !=
+    compare_ge(circle, list_circles, circle.__class__.__name__)  # >=
+    compare_gt(circle, list_circles, circle.__class__.__name__)  # >
+
+
 # using all methods to Point objs
 for i, point in enumerate(list_points):
-    print(f'{"-"*20}Point #{i+1} methods{"-"*20}')
+    print(f'{"-"*20}{point.__class__.__name__} #{i+1} methods{"-"*20}')
     print(str(point))
     print(repr(point))
-    print(
-        f'Distance point #{i+1} from origin = '
-        f'{list_points[i].distance_from_origin()}'
-    )
+    print(f'Distance from origin = {point.distance_from_origin()}')
 
     # comparing elements each other
     print(f'{"="*10}Comparing elements each other{"="*10}')
@@ -173,9 +195,9 @@ for i, point in enumerate(list_points):
     dict_compares = {}
     tmp_dict_compares = {}
 
-    compare_lt()  # <
-    compare_le()  # <=
-    compare_eq()  # ==
-    compare_ne()  # !=
-    compare_ge()  # >=
-    compare_gt()  # >
+    compare_lt(point, list_points, point.__class__.__name__)  # <
+    compare_le(point, list_points, point.__class__.__name__)  # <=
+    compare_eq(point, list_points, point.__class__.__name__)  # ==
+    compare_ne(point, list_points, point.__class__.__name__)  # !=
+    compare_ge(point, list_points, point.__class__.__name__)  # >=
+    compare_gt(point, list_points, point.__class__.__name__)  # >
