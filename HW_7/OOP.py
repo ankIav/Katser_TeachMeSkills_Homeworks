@@ -1,6 +1,6 @@
 """This module contains objects and methods of classes"""
-# TODO:  лучше так не делать импорт, а импортировать конкретный класс
-from classes import *
+
+from classes import Truck, Car
 
 # create 2 trucks in list
 trucks_list = [
