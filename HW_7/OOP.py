@@ -4,6 +4,107 @@ from classes import Truck, Car
 from classes_coordinates import Point, Circle
 
 
+def output_print(compare: str):
+    for key, value in dict_compares.items():
+        print(compare * 40) if len(compare) == 1 else print(compare * 20)
+        for value_k, value_v in value.items():
+            print(
+                f'Is {point.__class__.__name__} #{key + 1} {compare} '
+                f'{point.__class__.__name__} #{value_k + 1}? '
+                f'- {value_v}'
+            )
+
+
+def compare_lt():
+    """
+    <
+    """
+    for j in range(len(list_points)):
+        # skip comparing element to itself
+        if idx == j:
+            continue
+
+        tmp_dict_compares[j] = (point < list_points[j])
+        dict_compares[i] = tmp_dict_compares
+
+    output_print('<')
+
+
+def compare_le():
+    """
+    <=
+    """
+    for j in range(len(list_points)):
+        # skip comparing element to itself
+        if idx == j:
+            continue
+
+        tmp_dict_compares[j] = (point <= list_points[j])
+        dict_compares[i] = tmp_dict_compares
+
+    output_print('<=')
+
+
+def compare_eq():
+    """
+    ==
+    """
+    for j in range(len(list_points)):
+        # skip comparing element to itself
+        if idx == j:
+            continue
+
+        tmp_dict_compares[j] = (point == list_points[j])
+        dict_compares[i] = tmp_dict_compares
+
+    output_print('=')
+
+
+def compare_ne():
+    """
+    !=
+    """
+    for j in range(len(list_points)):
+        # skip comparing element to itself
+        if idx == j:
+            continue
+
+        tmp_dict_compares[j] = (point != list_points[j])
+        dict_compares[i] = tmp_dict_compares
+
+    output_print('!=')
+
+
+def compare_ge():
+    """
+    >=
+    """
+    for j in range(len(list_points)):
+        # skip comparing element to itself
+        if idx == j:
+            continue
+
+        tmp_dict_compares[j] = (point >= list_points[j])
+        dict_compares[i] = tmp_dict_compares
+
+    output_print('>=')
+
+
+def compare_gt():
+    """
+    >
+    """
+    for j in range(len(list_points)):
+        # skip comparing element to itself
+        if idx == j:
+            continue
+
+        tmp_dict_compares[j] = (point > list_points[j])
+        dict_compares[i] = tmp_dict_compares
+
+    output_print('>')
+
+
 # create 2 trucks in list
 trucks_list = [
     Truck('kamaz', '6460', 10, 20),
@@ -72,122 +173,9 @@ for i, point in enumerate(list_points):
     dict_compares = {}
     tmp_dict_compares = {}
 
-    """
-    <
-    """
-    for j in range(len(list_points)):
-        # skip comparing element to itself
-        if idx == j:
-            continue
-
-        tmp_dict_compares[j] = (point < list_points[j])
-        dict_compares[i] = tmp_dict_compares
-
-    for key, value in dict_compares.items():
-        print('<' * 40)
-        for value_k, value_v in value.items():
-            print(
-                f'Is {point.__class__.__name__} #{key+1} < '
-                f'{point.__class__.__name__} #{value_k+1}? '
-                f'- {value_v}'
-            )
-
-    """
-    <=
-    """
-    for j in range(len(list_points)):
-        # skip comparing element to itself
-        if idx == j:
-            continue
-
-        tmp_dict_compares[j] = (point <= list_points[j])
-        dict_compares[i] = tmp_dict_compares
-
-    for key, value in dict_compares.items():
-        print('<=' * 20)
-        for value_k, value_v in value.items():
-            print(
-                f'Is {point.__class__.__name__} #{key+1} <= '
-                f'{point.__class__.__name__} #{value_k+1}? '
-                f'- {value_v}'
-            )
-
-    """
-    ==
-    """
-    for j in range(len(list_points)):
-        # skip comparing element to itself
-        if idx == j:
-            continue
-
-        tmp_dict_compares[j] = (point == list_points[j])
-        dict_compares[i] = tmp_dict_compares
-
-    for key, value in dict_compares.items():
-        print('==' * 20)
-        for value_k, value_v in value.items():
-            print(
-                f'Is {point.__class__.__name__} #{key+1} == '
-                f'{point.__class__.__name__} #{value_k+1}? '
-                f'- {value_v}'
-            )
-
-    """
-    !=
-    """
-    for j in range(len(list_points)):
-        # skip comparing element to itself
-        if idx == j:
-            continue
-
-        tmp_dict_compares[j] = (point != list_points[j])
-        dict_compares[i] = tmp_dict_compares
-
-    for key, value in dict_compares.items():
-        print('!=' * 20)
-        for value_k, value_v in value.items():
-            print(
-                f'Is {point.__class__.__name__} #{key+1} != '
-                f'{point.__class__.__name__} #{value_k+1}? '
-                f'- {value_v}'
-            )
-
-    """
-    >=
-    """
-    for j in range(len(list_points)):
-        # skip comparing element to itself
-        if idx == j:
-            continue
-
-        tmp_dict_compares[j] = (point >= list_points[j])
-        dict_compares[i] = tmp_dict_compares
-
-    for key, value in dict_compares.items():
-        print('>=' * 20)
-        for value_k, value_v in value.items():
-            print(
-                f'Is {point.__class__.__name__} #{key+1} >= '
-                f'{point.__class__.__name__} #{value_k+1}? '
-                f'- {value_v}'
-            )
-
-    """
-    >
-    """
-    for j in range(len(list_points)):
-        # skip comparing element to itself
-        if idx == j:
-            continue
-
-        tmp_dict_compares[j] = (point > list_points[j])
-        dict_compares[i] = tmp_dict_compares
-
-    for key, value in dict_compares.items():
-        print('>' * 40)
-        for value_k, value_v in value.items():
-            print(
-                f'Is {point.__class__.__name__} #{key+1} > '
-                f'{point.__class__.__name__} #{value_k+1}? '
-                f'- {value_v}'
-            )
+    compare_lt()  # <
+    compare_le()  # <=
+    compare_eq()  # ==
+    compare_ne()  # !=
+    compare_ge()  # >=
+    compare_gt()  # >
