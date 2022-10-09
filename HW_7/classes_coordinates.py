@@ -46,7 +46,7 @@ class Point(object):
     def __le__(self, other) -> bool:
         """
         :param: self = first obj, other = next obj
-        :return: True if square first obj <= square second obj.
+        :return: True if square first obj. <= square second obj.
         """
 
         return self._square() <= other._square()
@@ -65,7 +65,7 @@ class Point(object):
         :return: True if coordinates first obj != coordinates second obj.
         """
 
-        return self.x != other.x and self.y != other.y
+        return self.x != other.x or self.y != other.y
 
     def __ge__(self, other) -> bool:
         """
@@ -173,11 +173,11 @@ class Circle(Point):
 
         return (
             self.x != other.x
-            and self.y != other.y
-            and self.radius != other.radius
+            or self.y != other.y
+            or self.radius != other.radius
         )
 
-    def __ge__(self, other):
+    def __ge__(self, other) -> bool:
         """
         :param: self = first obj, other = next obj
         :return: True if circumference first obj. >= circumference second obj.
@@ -185,7 +185,7 @@ class Circle(Point):
 
         return self.circumference() >= other.circumference()
 
-    def __gt__(self, other):
+    def __gt__(self, other) -> bool:
         """
         :param: self = first obj, other = next obj
         :return: True if circumference first obj. > circumference second obj.
