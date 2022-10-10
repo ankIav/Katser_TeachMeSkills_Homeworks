@@ -19,5 +19,7 @@
 ### HW_6: Text manipulation, serialization, and the file system
 
 ---
-### HW_7: OOP pt.1
+### HW_8: OOP pt.1
 
+---
+### HW_9: OOP pt.2
