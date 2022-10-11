@@ -1,7 +1,7 @@
 """This module compete Tasks HW 9"""
 
 from dataclasses import dataclass
-for data
+
 
 @dataclass
 class DataMetahuman:
@@ -54,11 +54,68 @@ class Villian(Hero):
         print(f'{__class__.__name__} will destroy the city!')
 
 
+class OnMyOwnMeta(metaclass=type):
+    """Metaclass"""
+
+    @classmethod
+    def show_loyality(cls):
+        """Show loyalty"""
+        print(f'This Meta is a {cls.__name__}')
+
+    @staticmethod
+    def destroy_city():
+        print('I dont care all about!')
+
+
+# creating a class instances
+superman = DataMetahuman(
+    alter_ego='superman',
+    age=36,
+    sex='man',
+    first_name='clark',
+    last_name='kent',
+    country='USA',
+    abilities=['flight', 'laser', 'extra power', 'high reflexes', 'x-ray'],
+    weaknesses=['cryptonite']
+)
+wonder_woman = DataMetahuman(
+    alter_ego='wonder-woman',
+    age=965,
+    sex='woman',
+    first_name='diana',
+    last_name='prince',
+    country='themyscira',
+    abilities=['flight', 'extra power', 'high reflexes', 'warrior'],
+    weaknesses=['bondage']
+)
+reverse_flash = DataMetahuman(
+    alter_ego='reverse flash',
+    age=42,
+    sex='man',
+    first_name='eobard',
+    last_name='thawne',
+    country='USA',
+    abilities=['speedforce', 'regeneration'],
+    weaknesses=['unbalanced']
+)
+
+deathstroke = DataMetahuman(
+    alter_ego='deathstroke',
+    age=47,
+    sex='man',
+    first_name='slade',
+    last_name='wilson',
+    country='USA',
+    abilities=['warrior', 'regeneration', 'reflexes', 'weapons'],
+    weaknesses=['just a overpowered human']
+)
+
 list_heroes = ['superman', 'wonder-woman']
 list_villians = ['reverse flash']
+list_mercenaries = ['deathstroke']
 
 
-list_meta_data = [superman, reverse_flash, wonder_woman]
+list_meta_data = [superman, reverse_flash, wonder_woman, deathstroke]
 list_meta = []
 
 # Is metahuman hero or villian?
@@ -70,15 +127,20 @@ for meta in list_meta_data:
     elif meta.alter_ego in list_villians:
         meta = Villian(meta)
         list_meta.append(meta)
+    else:
+        meta = OnMyOwnMeta()
+        list_meta.append(meta)
 
 
 # show info and loyalty
 for data in list_meta:
-    #
+
     if data.__class__.__name__ == 'Villian':
         data.show_info()
         data.show_loyality()
         Villian.destroy_city()
-    else:
+    elif data.__class__.__name__ == 'Hero':
         data.show_info()
         data.show_loyality()
+    else:
+        data.destroy_city()
