@@ -13,8 +13,15 @@ operators = {
 }
 
 
+class WrongFormat(Exception):
+    """Creating own exception errors
+    """
+    pass
+
+
 class Calculator:
-    """The main class, which will calculate an expression"""
+    """The main class, which will calculate an expression
+    """
 
     result = 0
 
@@ -33,7 +40,7 @@ class Calculator:
         string = string.split()
         # Getting a first negative and another nums into really negative nums.
         for i, el in enumerate(string):
-            if (
+            while (
                     string[i] == '-'
                     and string[i - 1] in operators.values()
                     or (string[i] == '-' and i == 0)
@@ -43,6 +50,27 @@ class Calculator:
 
         return string  # string now is list ['num', '+', '-num'...] format
 
+    @staticmethod
+    def str_to_int_float(args):
+        """
+        :param args:
+        :return:
+        """
+        list_return = []
+        for element in args:
+            try:
+                element = int(element)
+                list_return.append(element)
+            except ValueError:
+                try:
+                    element = float(element)
+                    list_return.append(element)
+                except ValueError:
+                    list_return.append(element)
+            continue
+
+        return list_return
+
     def __init__(self, expression: str):
         """Initializing attribute expression
         """
@@ -51,21 +79,32 @@ class Calculator:
     def __repr__(self) -> str:
         """:return: string info about the obj.
         """
-        return f'{__class__.__name__}(Expression: {" ".join(self.expression)})'
+        return f'{__class__.__name__}(Expression: {str(self)})'
 
     def __str__(self) -> str:
         """:return: readable ifo about the obj.
         """
-        return " ".join(self.expression)
+        expression = self.str_to_int_float(self.expression)
+        for i, el in enumerate(expression):
+            try:
+                while (
+                    expression[i] < 0
+                    and expression[i - 1] in operators.values()
+                ):
+                    expression[i + 1] = f'{str(expression[i + 1])}'
+                    del expression[i]
+            except Exception:
+                continue
+
+        return ' '.join(map(str, self.expression))
 
     def _plus(self):
         """
-
         :return:
         """
-        for num in self.expression:
-            if num not in operators.values():
-                num = float(num)
+        expression = self.str_to_int_float(self.expression)
+        for num in expression:
+            while num not in operators.values():
                 self.result += num
-
+                break
         return self.result
