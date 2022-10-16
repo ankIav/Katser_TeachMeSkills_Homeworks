@@ -3,10 +3,10 @@
 
 # main operators in calculator
 operators = {
-    'plus': '+',
-    'minus': '-',
-    'multiply': '*',
-    'division': '/',
+    'add': '+',
+    'sub': '-',
+    'mul': '*',
+    'div': '/',
 }
 
 
