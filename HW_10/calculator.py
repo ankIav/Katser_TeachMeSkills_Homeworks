@@ -2,10 +2,12 @@
 
 from classes import Calculator
 
-
-field = input('Enter the expression:\n').replace(' ', '').replace(',', '.')
-calculator = Calculator(field)
-
-# print(repr(calculator))
-print(calculator.calculate())
-
+while True:
+    try:
+        field = input('Enter the expression:\n').replace(' ', '').replace(',', '.')
+        calculator = Calculator(field)
+        print(calculator.calculate())
+    except Exception as err:
+        print(f'{err}\nTry again!')
+        continue
+    break
