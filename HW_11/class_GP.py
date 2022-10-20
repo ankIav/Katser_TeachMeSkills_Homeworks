@@ -9,7 +9,6 @@ def decorator_check(method):
     """
 
     def wrapper(self):
-
         if self.count == 0:
             return f'Count of Your geometric progression = 0!'
 
@@ -74,24 +73,23 @@ class GeometricProgression:
         if self.num > 0:
             return self.start * (self.q ** (self.num - 1))
 
+    @staticmethod
+    def __yield(start, q):
+        """
+        a hidden recursion func to count next el of GP
+        :param start: first element of GP
+        :param q: factor
+        :return: next el of GP.
+        """
+        yield start * q
+
     @decorator_check
     def get_list(self) -> list:
         """
         :return: Get full list of elements of GP into list
         """
 
-        return [self.start * (self.q ** i) for i in range(self.count)]
-
-
-prog = GeometricProgression(2, 3, 6, 0)
-
-print(
-    f'Sum of Geometry Progression {str(prog)}\n'
-    f'S({prog.count}) = {prog.sum()}'
-)
-print(
-    f'N-element of Geometry Progression {str(prog)}\n'
-    f'b({prog.num}) = {prog.find_b()}'
-)
-
-print(prog.get_list())
+        return [
+            next(self.__yield(self.start, self.q ** i))
+            for i in range(self.count)
+        ]
