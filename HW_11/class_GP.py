@@ -5,7 +5,6 @@
 def decorator_check(method):
     """
     Check count elements of GP
-    :return:
     """
 
     def wrapper(self):
@@ -18,9 +17,7 @@ def decorator_check(method):
 
 
 class GeometricProgression:
-    """
-
-    """
+    """Base class for GP"""
 
     def __init__(self, start=1, q=1, count=1, num=1):
         """
@@ -55,7 +52,7 @@ class GeometricProgression:
         if count == 1:
             return start
 
-        return start + GeometricProgression.__sum(start * q, q, count - 1)
+        return start + GeometricProgression.__sum(start * q, q, count-1)
 
     @decorator_check
     def sum(self) -> int | float:
@@ -71,7 +68,7 @@ class GeometricProgression:
         :return: a(n) element of GP
         """
         if self.num > 0:
-            return self.start * (self.q ** (self.num - 1))
+            return self.start * (self.q ** (self.num-1))
 
     @staticmethod
     def __yield(start, q):
@@ -90,6 +87,6 @@ class GeometricProgression:
         """
 
         return [
-            next(self.__yield(self.start, self.q ** i))
+            next(self.__yield(self.start, (self.q ** i)))
             for i in range(self.count)
         ]
