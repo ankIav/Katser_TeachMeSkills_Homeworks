@@ -26,3 +26,12 @@
 
 ---
 ### HW_10: Exceptions
+
+---
+### HW_11: Iterators, generators and Debugger
+
+---
+### HW_12: Databases and SQL pt.1
+
+---
+### HW_13: Databases and SQL pt.2

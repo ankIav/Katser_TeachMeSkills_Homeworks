@@ -1,0 +1,59 @@
+# СОЗДАНИЕ ПЕРВОЙ ТАБЛИЦЫ
+CREATE TABLE STUDENTS(
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    FullName VARCHAR(45),
+    Age INT,
+    AvgMark FLOAT
+);
+#
+# СОЗДАНИЕ ВТОРОЙ ТАБЛИЦЫ И ПРИВЯЗКА К ПЕРВОЙ ПО ВТОРИЧНОМУ КЛЮЧУ
+CREATE TABLE PROGRESS(
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    StudentID INT,
+    MATH INT,
+    PHYSICS INT,
+    LITERATURE INT,
+    FOREIGN KEY (StudentID) REFERENCES STUDENTS(ID)
+);
+
+# УДАЛЕНИЕ ВТОРИЧНОГО КЛЮЧА
+ALTER TABLE PROGRESS
+DROP FOREIGN KEY PROGRESS_ibfk_1;
+
+# ДОБАВЛЕНИЕ НОВОГО ВТОРИЧНОГО КЛЮЧА
+ALTER TABLE PROGRESS
+ADD FOREIGN KEY (StudentID) REFERENCES STUDENTS(ID) ON DELETE SET NULL
+
+# ЗАПОЛНЕНИЕ ДАННЫМИ ПЕРВОЙ ТАБЛИЦЫ
+INSERT INTO STUDENTS (FULLNAME, AGE, AvgMark)
+VALUES
+    ('Clark Kent', 33, 6.8),
+    ('Diana Prince', 356, 8.4),
+    ('Tony Stark', 53, 9.7),
+    ('Anne Hathaway', 42, 7.7),
+    ('Bart Simpson', 8, 3.4);
+
+# ПРОСМОТР РЕЗУЛЬТАТА ЗАПОЛНЕНИЯ 1 ТАБЛИЦЫ
+# SELECT * FROM STUDENTS
+
+# ЗАПОЛНЕНИЕ ДАННЫМИ ВТОРОЙ ТАБЛИЦЫ
+INSERT INTO PROGRESS (StudentID, MATH, PHYSICS, LITERATURE)
+VALUES
+    (5, 4, 6, 2),
+    (3, 9, 10 , 8),
+    (4, 7, 8 , 6),
+    (1, 6, 5, 9),
+    (2, 5, 7, 10);
+
+# ПРОСМОТР РЕЗУЛЬТАТА ЗАПОЛНЕНИЯ 2 ТАБЛИЦЫ
+# SELECT * FROM PROGRESS
+
+# ОБНОВЛЕНИЕ СРЕДНЕГО БАЛЛА В ПЕРВОЙ ТАБЛИЦЕ ДАННЫМИ ИЗ ВТОРОЙ
+UPDATE STUDENTS, PROGRESS
+    SET STUDENTS.AvgMark = (PROGRESS.MATH + PROGRESS.PHYSICS + PROGRESS.LITERATURE) / 3
+WHERE STUDENTS.ID = PROGRESS.StudentID
+
+# СОЗДАНИЕ ЗАПРОСА ЧЕРЕЗ JOIN
+SELECT S.ID, S.FULLNAME, P.MATH, P.PHYSICS, P.LITERATURE, S.AvgMark
+FROM STUDENTS S
+INNER JOIN PROGRESS P on S.ID = P.StudentID
