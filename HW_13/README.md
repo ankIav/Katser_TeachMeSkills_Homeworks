@@ -14,6 +14,7 @@ Then i updated first table with new averege mark with data on second table:
 <p align="center">
 <img alt="img.png" src="images/HW_13_1.png"/>
 </p>
+
 * After update:
 <p align="center">
 <img alt="img.png" src="images/HW_13_2.png"/>
