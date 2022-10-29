@@ -47,6 +47,7 @@ This program uses:
     r'+(@(([A-Za-z0-9]+-)*[A-Za-z0-9]){,63})'           # hostname
     r'+(\.[A-Z|a-z]{2,6})+'                             # .domain type
     )
+
 - Class Email can return _username_, _hostname_ and _domain type_ apart with methods **username**, **hostname** and **domain_type** respectively. 
 - Also in **_email.py_** you can use you oun pattern to return email with changed host with **sub** method.
 - get updated list of e-mails with method **list**.
