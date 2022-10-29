@@ -11,8 +11,10 @@ Then i updated first table with new averege mark with data on second table:
         SET STUDENTS.AvgMark = (PROGRESS.MATH + PROGRESS.PHYSICS + PROGRESS.LITERATURE) / 3
     WHERE STUDENTS.ID = PROGRESS.StudentID
 * First table before update:
+
 ![img.png](images/HW_13_1.png)
 * After update:
+
 ![img.png](images/HW_13_2.png)
 
 Then I used INNER JOIN:
@@ -21,4 +23,5 @@ Then I used INNER JOIN:
     FROM STUDENTS S
     INNER JOIN PROGRESS P on S.ID = P.StudentID
 This is result of its:
+
 ![img.png](images/HW_13_3_join.png)
