@@ -13,7 +13,7 @@ Then i updated first table with new averege mark with data on second table:
 * First table before update:
 <p align="center">
 <img alt="img.png" src="images/HW_13_1.png"/>
-</p>>
+</p>
 * After update:
 <p align="center">
 <img alt="img.png" src="images/HW_13_2.png"/>
