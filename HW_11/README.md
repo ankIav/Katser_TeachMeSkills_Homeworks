@@ -42,9 +42,9 @@ This program uses:
 -  _**re**_ library for regex string and it looks so:
 
        regex = re.compile(
-       r'([A-Za-z0-9]+[.!#%&`*+/=?^_{|}''-])*[A-Za-z0-9]'  # username
-       r'+(@(([A-Za-z0-9]+-)*[A-Za-z0-9]){,63})'           # hostname
-       r'+(\.[A-Z|a-z]{2,6})+'                             # .domain type
+           r'([A-Za-z0-9]+[.!#%&`*+/=?^_{|}''-])*[A-Za-z0-9]'  # username
+           r'+(@(([A-Za-z0-9]+-)*[A-Za-z0-9]){,63})'           # hostname
+           r'+(\.[A-Z|a-z]{2,6})+'                             # .domain type
        )
 
 - Class Email can return _username_, _hostname_ and _domain type_ apart with methods **username**, **hostname** and **domain_type** respectively. 
