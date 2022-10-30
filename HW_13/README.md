@@ -1,7 +1,9 @@
 ### Task 1:
 
 **_RU_**: Создать БД с двумя таблицами, соединить их JOIN'ом.
+
 **_EN_**: Create a database with two tables, join them with a JOIN.
+
 ---
 ## Result:
 I made 2 tables. 
