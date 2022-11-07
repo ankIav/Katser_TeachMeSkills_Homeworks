@@ -1,0 +1,491 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Ankiav</title>
+<meta name="description" content="">
+<meta name="author" content="ankiav">
+
+<!-- Favicons
+    ================================================== -->
+<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico')}}" type="image/x-icon">
+<!--<link rel="apple-touch-icon" href="{{ url_for('static', filename='img/apple-touch-icon.png')}}">-->
+<!--<link rel="apple-touch-icon" sizes="72x72" href="{{ url_for('static', filename='img/apple-touch-icon-72x72.png')}}">-->
+<!--<link rel="apple-touch-icon" sizes="114x114" href="{{ url_for('static', filename='img/apple-touch-icon-114x114.png')}}">-->
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='css/bootstrap.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font-awesome/css/font-awesome.css')}}">
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='css/style.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/prettyPhoto.css')}}">
+<link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="{{ url_for('static', filename='js/modernizr.custom.js')}}"></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+<!-- Header -->
+<header id="header">
+  <div class="intro">
+    <div class="container">
+      <div class="row">
+        <div class="intro-text">
+          <h1>Приветик, май нэйм из </picture><span class="name">Миша Кацер</span></h1>
+          <p>Котик на двух лапках & ходячий мемасик </p>
+          <a href="#about" class="btn btn-default btn-lg page-scroll">Я хочу тебя узнать лучше</a> </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Navigation -->
+<div id="nav">
+  <nav class="navbar navbar-custom">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"> <i class="fa fa-bars"></i> </button>
+        <a class="navbar-brand page-scroll" href="#page-top">Миша Кацер</a> </div>
+      
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+        <ul class="nav navbar-nav">
+          <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+          <li class="hidden"> <a href="#page-top"></a> </li>
+          <li> <a class="page-scroll" href="/">Вернуться на главную</a> </li>
+          <li> <a class="page-scroll" href="#about">Обо мне</a> </li>
+          <li> <a class="page-scroll" href="#skills">Навыки</a> </li>
+          <li> <a class="page-scroll" href="#portfolio">Портфолио</a> </li>
+          <li> <a class="page-scroll" href="#resume">Резюме</a> </li>
+          <li> <a class="page-scroll" href="#contact">Контакты</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<!-- About Section -->
+<div id="about">
+  <div class="container">
+    <div class="section-title text-center center">
+      <h2>Самоописание</h2>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center"><img src="../static/img/about.jpg" class="img-responsive"></div>
+      <div class="col-md-8 col-md-offset-2">
+        <div class="about-text">
+          <p>Доброго времени суток! Эта страница создана только для демонстрации моих навыков, стараний и страданий, чтобы сдать зачет по предмету "ЯЗЫКИ ПРОГРАММИРОВАНИЯ", который я очень хочу получить, тогда буду очень доволен, т.к. не все окажется потерянным и не расстрою свою маму.</p>
+          <p>Родом я из Сенно - маленького районного центра в витебской области. В детстве хотел стать спортсменом, но мое здоровье не позволило продолжать заниматься, потом даже заманчивым предложением была военная академия, но и тут здоровье подвело, и вот я здесь.</p>
+          <p class="text-center"><a class="btn btn-primary" href="#"><i class="fa fa-download"></i> Здесь должна быть полезная кнопочка</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Skills Section -->
+<div id="skills" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+      <h2>Навыки</h2>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="15"> <span class="percent">15</span> </span>
+        <h4>HTML5</h4>
+      </div>
+	  <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="100"> <span class="percent">100</span> </span>
+        <h4>Знание мемов</h4>
+      </div>
+      <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="29"> <span class="percent">29</span> </span>
+        <h4>CSS3</h4>
+      </div>
+      <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="85"> <span class="percent">85</span> </span>
+        <h4>Футбол</h4>
+      </div>
+	  <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="49"> <span class="percent">49</span> </span>
+        <h4>Assembler</h4>
+      </div>
+      <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="100"> <span class="percent">100</span> </span>
+        <h4>ПК игры</h4>
+      </div>
+      <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="77"> <span class="percent">77</span> </span>
+        <h4>Photoshop</h4>
+      </div>
+	  <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="35"> <span class="percent">35</span> </span>
+        <h4>C/C++</h4>
+      </div>
+      <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="45"> <span class="percent">45</span> </span>
+        <h4>Достижения в Steam</h4>
+      </div>
+	  <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="98"> <span class="percent">98</span> </span>
+        <h4>Лень</h4>
+      </div>
+	  <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="0"> <span class="percent">0</span> </span>
+        <h4>Желание жить в случае незачёта</h4>
+      </div>
+	  <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="95"> <span class="percent">95</span> </span>
+        <h4>Желание жить в случае зачёта</h4>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Portfolio Section -->
+<div id="portfolio">
+  <div class="container">
+    <div class="section-title text-center center">
+      <h2>Портфолио</h2>
+      <hr>
+    </div>
+    <div class="categories">
+      <ul class="cat">
+        <li>
+          <ol class="type">
+            <li><a href="#" data-filter="*" class="active">Всё</a></li>
+            <li><a href="#" data-filter=".web">Хобби</a></li>
+            <li><a href="#" data-filter=".app">Это сделал я</a></li>
+            <li><a href="#" data-filter=".branding">Любимые работы</a></li>
+          </ol>
+        </li>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+    <div class="row">
+      <div class="portfolio-items">
+        <div class="col-sm-6 col-md-3 col-lg-3 web">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="../static/img/portfolio/01-large.jpg" title="Вышел на пробежку, а пришел с фото заката" rel="prettyPhoto">
+			<div class="hover-text">
+                <h4>Закаты ванлав</h4>
+                <small>Учусь в обработку фото</small> </div>
+              <img src="../static/img/portfolio/01-small.jpg" class="img-responsive" alt="Малиновый закат"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 app">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="../static/img/portfolio/02-large.jpg" title="Данное фото символизирует полет по вредным привычкам" rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>Вредный Самолётик</h4>
+                <small>Это сделал я</small> </div>
+              <img src="../static/img/portfolio/02-small.jpg" class="img-responsive" alt="Вредный Самолётик"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 web">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="../static/img/portfolio/03-large.jpg" title="Потом я расстроился немного, но и времени в этом мире провел немало" rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>Обожаю я Fallout</h4>
+                <small>Познаю вымышленные прекрасные миры</small> </div>
+              <img src="../static/img/portfolio/03-small.jpg" class="img-responsive" alt="Всё еще не похоронил надежды на новую часть"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 web">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="../static/img/portfolio/04-large.jpg" title="Нельзя получить зачёт без котиков" rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>Котики</h4>
+                <small>Все любят котиков</small> </div>
+              <img src="../static/img/portfolio/04-small.jpg" class="img-responsive" alt="Котятки :3"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 app">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="../static/img/portfolio/05-large.jpg" title="Этот мем сделал я, он собрал аж 7 лайков" rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>Лига справедливости</h4>
+                <small>Ожидания фильма, а внутри - правда</small> </div>
+              <img src="../static/img/portfolio/05-small.jpg" class="img-responsive" alt="Лига справедливости"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 branding">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="../static/img/portfolio/06-large.jpg" title="Классическая история взаимоотношений преподавателей и студентов" rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>Сессия в одной картинке</h4>
+                <small>Создаю картинки</small> </div>
+              <img src="../static/img/portfolio/06-small.jpg" class="img-responsive" alt="Ну пожалуйста, я старался"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 branding app">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="../static/img/portfolio/07-large.jpg" title="Это место находится на Острове птиц" rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>Моё любимое фото</h4>
+                <small>Любимые работы</small> </div>
+              <img src="../static/img/portfolio/07-small.jpg" class="img-responsive" alt="Моё любимое фото"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 web">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="../static/img/portfolio/08-large.jpg" title="Не перестану любить фильмы" rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>Обожаю фильмы</h4>
+                <small>Изучаю магию кино</small> </div>
+              <img src="../static/img/portfolio/08-small.jpg" class="img-responsive" alt="Пару любимых фильмов/сериалов"> </a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Achievements Section -->
+<div id="achievements" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+      <h2>Какие-то важные цифры</h2>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-3 wow fadeInDown" data-wow-delay="200ms">
+        <div class="achievement-box"> <span class="count">44</span>
+          <h4>Количество игр в Steam, которое увеличится после последней конференции Е3</h4>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-3 wow fadeInDown" data-wow-delay="400ms">
+        <div class="achievement-box"> <span class="count">34865</span>
+          <h4>Количество часов над этим сайтом</h4>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-3 wow fadeInDown" data-wow-delay="600ms">
+        <div class="achievement-box"> <span class="count">285</span>
+          <h4>Фильмы, оцененные на Кинопоиске</h4>
+        </div>
+      </div>
+      
+
+		<div class="col-md-3 col-sm-3 wow fadeInDown" data-wow-delay="1000ms">
+        <div class="achievement-box"> <span class="count">2022</span>
+          <h4>Какой сейчас год</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Resume Section -->
+<div id="resume" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+      <h2>Образование</h2>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <ul class="timeline">
+          <li>
+            <div class="timeline-image">
+              <h4>Сен 2001 <br>
+                - <br>
+                Май 2012 </h4>
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4>Школа №2</h4>
+                <h4 class="subheading">Школьник</h4>
+              </div>
+              <div class="timeline-body">
+                <p>Прилежный ученик, один из лучших в классе</p>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-inverted">
+            <div class="timeline-image">
+              <h4>Сен 2012 <br>
+                - <br>
+                Фев 2013 </h4>
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4>ПГУ, Компьютерная безопасность</h4>
+                <h4 class="subheading">Студент</h4>
+              </div>
+              <div class="timeline-body">
+                <p>Успешный студент, но слишком переволновался на экзаменах и потерял дар речи</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-image">
+              <h4>Сен 2013 <br>
+                - <br>
+                Июль 2016 </h4>
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4>БГАС</h4>
+                <h4 class="subheading">Студент</h4>
+              </div>
+              <div class="timeline-body">
+                <p>На этот раз мозг не отключался на сессии</p>
+              </div>
+            </div>
+          </li>
+		   <li class="timeline-inverted">
+            <div class="timeline-image">
+              <h4>Сен 2016 <br>
+                - <br>
+                Настоящее время </h4>
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4>ИИТ БГУИР, ПМС</h4>
+                <h4 class="subheading">Студент</h4>
+              </div>
+              <div class="timeline-body">
+                <p>Получаю образование в престижном учреждении образования</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="section-title center">
+      <h2>Опыт</h2>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <ul class="timeline">
+          
+          <!-- Education Section-->
+          
+          <li>
+            <div class="timeline-image">
+              <h4>Апр 2012 <br>
+                - <br>
+                Авг 2012 </h4>
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4>РУП БЕЛПОЧТА</h4>
+                <h4 class="subheading">Инженер-электроник/сис. админ</h4>
+              </div>
+              <div class="timeline-body">
+                <p>Набирался опыта в работе сис. админа, работал добросовестно и всё выполнял в срок</p>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-inverted">
+            <div class="timeline-image">
+              <h4>Авг 2016 <br>
+                - <br>
+                Настоящее время </h4>
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4>БЕЛЛИФТ</h4>
+                <h4 class="subheading">Электромонтёр ДОиТА</h4>
+              </div>
+              <div class="timeline-body">
+                <p>Просто отработка, мечтаю найти достойное место работы</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-image">
+              <h4>2019 <br>
+                - <br>
+                Неявное будущее </h4>
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4>IT-компания</h4>
+                <h4 class="subheading">Какой-нибудь крутой специалист</h4>
+              </div>
+              <div class="timeline-body">
+                <p class="text-muted">Сделаю всё возможное, что в моих силах, чтобы оправдать свои ожидания и не разочаровать близких</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Contact Section -->
+<div id="contact" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+      <h2>Контакты</h2>
+      <hr>
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-4"> <i class="fa fa-map-marker fa-2x"></i>
+        <p>Республика Беларусь<br>
+          220085, Минск, пер. Кабушкина 7, 36</p>
+      </div>
+      <div class="col-md-4"> <i class="fa fa-envelope-o fa-2x"></i>
+        <p>katser.mike@gmail.com</p>
+      </div>
+      <div class="col-md-4"> <i class="fa fa-phone fa-2x"></i>
+        <p> +375 29 5461187</p>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+      <h3>Оставьте сообщение</h3>
+      <form name="sentMessage" id="contactForm" novalidate>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text" id="name" class="form-control" placeholder="Имя" required="required">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="email" id="email" class="form-control" placeholder="E-mail" required="required">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea name="message" id="message" class="form-control" rows="4" placeholder="Буквы сообщения" required></textarea>
+          <p class="help-block text-danger"></p>
+        </div>
+        <div id="success"></div>
+        <button type="submit" class="btn btn-default">Послать голубя</button>
+      </form>
+      <div class="social">
+        <ul>
+          <li><a href="https://github.com/ankIav" target="_blank"><i class="fa fa-github"></i></a></li>
+          <li><a href="https://www.facebook.com/mike.katser" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://twitter.com/AnkIavLove" target="_blank"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://vk.com/id750905416" target="_blank"><i class="fa fa-vk"></i></a></li>
+          <li><a href="https://steamcommunity.com/id/ankiav/" target="_blank"><i class="fa fa-steam"></i></a></li>
+          <li><a href="https://instagram.com/mishail.ka" target="_blank"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="https://t.me/ankiav" target="_blank"><i class="fa fa-paper-plane"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="footer">
+  <div class="container text-center">
+    <div class="fnav">
+      <p>Copyright &copy; 2022 Mikhail Katsar. Designed by <a href="https://github.com/ankIav" rel="nofollow">ankiav.</a></p>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="../static/js/jquery.1.11.1.js"></script>
+<script type="text/javascript" src="../static/js/bootstrap.js"></script>
+<script type="text/javascript" src="../static/js/SmoothScroll.js"></script>
+<script type="text/javascript" src="../static/js/easypiechart.js"></script>
+<script type="text/javascript" src="../static/js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="../static/js/jquery.isotope.js"></script>
+<script type="text/javascript" src="../static/js/jquery.counterup.js"></script>
+<script type="text/javascript" src="../static/js/waypoints.js"></script>
+<script type="text/javascript" src="../static/js/jqBootstrapValidation.js"></script>
+<script type="text/javascript" src="../static/js/contact_me.js"></script>
+<script type="text/javascript" src="../static/js/main.js"></script>
+</body>
+</html>
