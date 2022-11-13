@@ -35,3 +35,39 @@ Web-page on address `http://127.0.0.1:5000/` on my desktop PC:
 <p align="center">
 <img alt="img.png" sizes="830x453" src="readme/homegape.png"/>
 </p>
+
+
+# HW_17
+### Expanded the functionality of the flask application and added a connection to the MySQL database with SQLAlchemy. Created a page for adding data to the database.
+
+added new endpoints _/database_ и _/register_
+
+To connect Database with Flask-app in **settings.py**:
+```python
+app.config['SQLALCHEMY_DATABASE_URI'] = (
+    f'{DIALECT_DB}+pymysql://{USER_DB}:{PASSWORD_DB}@{HOST_DB}:{PORT_DB}/'
+    f'{NAME_DB}?charset=utf8'
+)
+```
+Then we need to create our tables in **models.py**:
+```python
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.sql import func
+from settings import app
+
+db = SQLAlchemy(app=app)
+```
+To build tables we need to use **_flask shell_**:
+```commandline
+from models import db, Users, Profiles
+db.create_all() 
+```
+Then we've got registration page:
+<p align="center">
+<img alt="img.png" sizes="830x453" src="readme/regist.png"/>
+</p>
+
+After confirm registration redirect to _/database_ web-page with updated database:
+<p align="center">
+<img alt="img.png" sizes="830x453" src="readme/database.png"/>
+</p>
