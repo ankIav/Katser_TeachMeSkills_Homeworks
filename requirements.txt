@@ -1,3 +1,6 @@
 openpyxl
 mysql-connector-python
 Flask
+Flask-SQLAlchemy
+python-dotenv
+pymysql

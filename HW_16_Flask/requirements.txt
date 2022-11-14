@@ -1,1 +1,5 @@
 Flask==2.2.2
+SQLAlchemy
+python-dotenv
+pymysql
+werkzeug.security

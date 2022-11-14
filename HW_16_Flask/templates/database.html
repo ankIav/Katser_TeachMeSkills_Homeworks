@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}DB Students{% endblock %}
+
+
+{% block header %}
+<h2>Students Database</h2>
+{% for item in data %}
+<tr>
+    <h1><td>{{item[0]}}</td>
+    <td>{{item[1]}}</td>
+    <td>{{item[2]}}</td>
+    <td>{{item[3]}}</td>
+    </h1>
+</tr>
+{% endfor %}
+{% endblock %}
+
+{% block register %}
+<li> <a class="page-scroll" href="/register">+Registration new</a> </li>
+{% endblock %}
