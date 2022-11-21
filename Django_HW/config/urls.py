@@ -21,6 +21,7 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
-    path('<slug:user>/post/<int:post_id>', post)
+    path('<slug:user>/post/<int:post_id>', posts),
+    path('<slug:user>', profile),
     # path('post/<int:id>', mainapp.post_page, )
 ]
