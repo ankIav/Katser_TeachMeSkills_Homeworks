@@ -1,0 +1,26 @@
+{% extends 'mainapp/base.html' %}
+
+{% block meta_title %}
+{#    {% for nick, user, bio, link, bday, user_created, post, post_created, id in row %}#}
+        aloha
+{#    {% endfor %}#}
+{% endblock %}
+
+{% block home %}/{% endblock %}
+
+{% block body %}
+  {% for nick, user, bio, link, bday, user_created, post, post_created, id in row %}
+    <h2>{{ nick }}(@{{ user }})</h2>
+    <h3>BIO: {{ bio }}<br>
+        BIRTHDAY: {{ bday }}<br>
+        REGISTER DATE: {{ user_created }}
+    </h3>
+  {% endfor %}
+    {% for nick, user, bio, link, bday, user_created, post, post_created, post_id in row %}
+        <table>
+        <tr>
+      <td>{{ nick }}<a href="">(@{{ user }})</a> - <a href="/{{ user }}/post/{{ post_id }}">{{ post }}</a></td>
+        </tr>
+        </table>
+    {% endfor %}
+{% endblock %}

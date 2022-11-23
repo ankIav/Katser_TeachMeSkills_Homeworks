@@ -1,0 +1,16 @@
+{% extends 'mainapp/base.html' %}
+
+{% block meta_title %}
+All posts
+{% endblock %}
+
+{% block body %}
+<table>
+  <h1>data</h1>
+    {% for nick, user, post, post_id in row %}
+      <tr>
+          <td>{{ nick }}<a href="/{{ user }}">(@{{ user }})</a> - <a href="/{{ user }}/post/{{ post_id }}">{{ post }}</a></td>
+      </tr>
+    {% endfor %}
+</table>
+{% endblock %}

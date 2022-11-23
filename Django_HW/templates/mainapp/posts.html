@@ -1,0 +1,16 @@
+{% extends 'mainapp/base.html' %}
+
+{% block meta_title %}
+    POST
+{% endblock %}
+
+{% block home %}/{% endblock %}
+
+{% block body %}
+    {% for nick, user, post, created, post_id in row %}
+      <h1>POST #{{ post_id }}</h1>
+      <tr>
+          <td>{{ nick }}<a href="/{{ user }}">(@{{ user }})</a> - {{ post }}: {{ created }}</td>
+      </tr>
+    {% endfor %}
+{% endblock %}
