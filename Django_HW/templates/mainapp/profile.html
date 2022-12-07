@@ -6,11 +6,9 @@
 {#    {% endfor %}#}
 {% endblock %}
 
-{% block home %}/{% endblock %}
-
 {% block body %}
   {% for nick, user, bio, link, bday, user_created, post, post_created, id in row %}
-    <h2>{{ nick }}(@{{ user }})</h2>
+    <h1>{{ nick }}(@{{ user }})</h1>
     <h3>BIO: {{ bio }}<br>
         BIRTHDAY: {{ bday }}<br>
         REGISTER DATE: {{ user_created }}
