@@ -34,6 +34,8 @@ def posts(request, user: str, post_id: int):
         cursor.execute(qwery)
         row = cursor.fetchall()
 
+    # context = Posts.objects.all()
+
     return render(
             request, 'mainapp/posts.html', {'row': row}
     )
